@@ -2,43 +2,44 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.maksymg.workingwiththreads.MainActivity">
 
     <TextView
-        android:id="@+id/textView_tasks"
+        android:id="@+id/tasksTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tasks have been executing:"
-        app:layout_constraintBottom_toTopOf="@id/textView_counter_tasks"
+        app:layout_constraintBottom_toTopOf="@id/counterTasksTextView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_counter_tasks"
+        android:id="@+id/counterTasksTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/image"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView_tasks" />
+        app:layout_constraintTop_toBottomOf="@id/tasksTextView" />
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/button_add"
+        app:layout_constraintBottom_toTopOf="@id/btnGo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView_counter_tasks" />
+        app:layout_constraintTop_toBottomOf="@id/counterTasksTextView" />
 
     <Button
-        android:id="@+id/button_add"
+        android:id="@+id/btnGo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add task"
+        android:text="Execute"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
